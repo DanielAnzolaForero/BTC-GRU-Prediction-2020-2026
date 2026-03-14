@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ML
+ml_service/data/*.csv
+ml_service/data/*.parquet
+ml_service/models/*.pt
+ml_service/models/*.pth
+
+# React/Node
+node_modules/
+dist/
+build/
+.eslintcache
+
+# OS
+.DS_Store
+Thumbs.db
