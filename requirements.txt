@@ -9,6 +9,9 @@ pandas>=2.2.0
 numpy>=1.26.3
 sqlalchemy>=2.0.25
 binance-connector>=3.5.0
+xgboost
+joblib
+
 
 # Machine Learning
 torch>=2.2.0

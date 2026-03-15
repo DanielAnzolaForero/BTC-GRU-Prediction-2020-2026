@@ -1,26 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  color-scheme: dark;
+@layer base {
+  body {
+    background-color: #09090b;
+    /* Fondo oscuro base */
+    color: white;
+  }
 }
 
-body {
-  background-color: #09090b;
-  color: #fafafa;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+@layer components {
+
+  /* Efecto de cristal para las tarjetas */
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+
+  /* Texto degradado para el título */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500;
+  }
 }
 
-.glass-card {
-  background: rgba(24, 24, 27, 0.4);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
+@utility bg-primary {
+  background-color: var(--color-blue-600);
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #3b82f6 0%, #f43f5e 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+@utility bg-primary-dark {
+  background-color: var(--color-blue-700);
+}
+
+@utility text-primary {
+  color: var(--color-blue-500);
+}
+
+@utility text-accent {
+  color: var(--color-purple-500);
+}
+
+@utility border-l-primary {
+  border-left-color: var(--color-blue-500);
 }

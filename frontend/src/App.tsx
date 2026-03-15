@@ -1,10 +1,11 @@
-import React from 'react'
-import Dashboard from './pages/Dashboard'
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
-    <Dashboard />
-  )
+    <div className="min-h-screen bg-[#09090b] text-white">
+      <Dashboard />
+    </div>
+  );
 }
 
-export default App
+export default App;
