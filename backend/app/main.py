@@ -5,12 +5,14 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
-from backend.app.api.v1 import endpoints
 
 # --- CONFIGURACIÓN DE RUTAS ---
 # Subimos 3 niveles: app -> backend -> raíz (crypto-pro)
 root_path = Path(__file__).resolve().parent.parent.parent
 sys.path.append(str(root_path))
+
+# IMPORTANTE: Importar después de configurar el path
+from backend.app.api.v1 import endpoints
 
 app = FastAPI(title="Crypto Prediction API")
 
