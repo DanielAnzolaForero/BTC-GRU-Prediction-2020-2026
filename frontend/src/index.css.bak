@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'IBM Plex Mono', monospace;
+    background: #060a10;
+    color: #f1f5f9;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  ::-webkit-scrollbar       { width: 3px; height: 3px; }
+  ::-webkit-scrollbar-track { background: #060a10; }
+  ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 2px; }
+}
+
+@layer components {
+  .vx-card {
+    @apply bg-card border border-line rounded-xl overflow-hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,.5);
+  }
+  .vx-pill-buy  { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-buy  bg-buy/10  border border-buy/25  text-[10px] font-semibold tracking-widest; }
+  .vx-pill-sell { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-sell bg-sell/10 border border-sell/25 text-[10px] font-semibold tracking-widest; }
+  .vx-pill-hold { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-hold bg-hold/10 border border-hold/25 text-[10px] font-semibold tracking-widest; }
+}
+
+/* ── Pulse animations for hero card border ── */
+@keyframes pulse-high {
+  0%,100% { box-shadow: 0 0 0 1px rgba(0,217,126,.12); border-color: rgba(0,217,126,.2); }
+  50%      { box-shadow: 0 0 18px rgba(0,217,126,.2), 0 0 36px rgba(0,217,126,.06); border-color: rgba(0,217,126,.4); }
+}
+@keyframes pulse-mid {
+  0%,100% { box-shadow: 0 0 0 1px rgba(255,183,3,.1); border-color: rgba(255,183,3,.2); }
+  50%      { box-shadow: 0 0 16px rgba(255,183,3,.2), 0 0 30px rgba(255,183,3,.05); border-color: rgba(255,183,3,.4); }
+}
+@keyframes pulse-low {
+  0%,100% { box-shadow: 0 0 0 1px rgba(255,77,109,.15); border-color: rgba(255,77,109,.25); }
+  50%      { box-shadow: 0 0 20px rgba(255,77,109,.25), 0 0 40px rgba(255,77,109,.08); border-color: rgba(255,77,109,.5); }
+}
