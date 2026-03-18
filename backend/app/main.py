@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
-from app.api.v1 import endpoints
+from backend.app.api.v1 import endpoints
 
 # --- CONFIGURACIÓN DE RUTAS ---
 # Subimos 3 niveles: app -> backend -> raíz (crypto-pro)
