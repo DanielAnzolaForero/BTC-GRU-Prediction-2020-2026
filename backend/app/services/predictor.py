@@ -5,8 +5,8 @@ import json
 import pandas as pd
 import numpy as np
 # Importamos tus clases del proyecto
-from ml_service.src.preprocessing_v2 import DataPreprocessor
-from ml_service.src.data_loader import BinanceDataLoader
+from backend.ml_service.src.preprocessing_v2 import DataPreprocessor
+from backend.ml_service.src.data_loader import BinanceDataLoader
 
 class PredictorService:
     def __init__(self, symbol="BTCUSDT"):
