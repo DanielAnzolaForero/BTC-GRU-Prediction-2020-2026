@@ -100,7 +100,7 @@ export default function PriceChart({ history }) {
             <p className="font-mono text-[8px] text-dim tracking-[2px]">ESPERANDO 2 SEÑALES PARA GRAFICAR...</p>
           </div>
         ) : (
-          <ResponsiveContainer width="100%" height={180}>
+          <ResponsiveContainer width="100%" height={320}>
             <AreaChart data={pts} margin={{ top: 8, right: 12, left: 0, bottom: 0 }}>
               <defs>
                 <linearGradient id="priceGrad" x1="0" y1="0" x2="0" y2="1">

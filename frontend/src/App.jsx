@@ -44,7 +44,7 @@ export default function App() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-4xl mx-auto px-5 py-6 flex flex-col gap-4"
+        className="max-w-6xl mx-auto px-5 py-6 flex flex-col gap-4"
       >
         <motion.div variants={itemVariants}>
           <ErrorBanner error={shownError} onDismiss={() => setDismissedError(error)}/>
@@ -55,18 +55,19 @@ export default function App() {
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <PriceChart history={history} />
-            <HistoryTable
-              history={history}
-              timeframe={timeframe}
-              setTimeframe={setTimeframe}
-            />
-          </div>
+          <PriceChart history={history} />
+        </motion.div>
+
+        <motion.div variants={itemVariants}>
+          <HistoryTable 
+            history={history} 
+            timeframe={timeframe} 
+            setTimeframe={setTimeframe} 
+          />
         </motion.div>
       </motion.main>
 
-      <footer className="max-w-4xl mx-auto px-5 pb-8">
+      <footer className="max-w-6xl mx-auto px-5 pb-8">
         <div className="border-t border-line pt-4 flex flex-wrap justify-between gap-2">
           <p className="font-mono text-[7px] text-faint tracking-widest">© 2025 VORTEX TRADING INTELLIGENCE · XGBOOST ML CORE</p>
           <p className="font-mono text-[7px] text-faint tracking-wide">SOLO FINES INFORMATIVOS — NO ASESORAMIENTO FINANCIERO</p>

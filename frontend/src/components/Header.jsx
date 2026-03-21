@@ -10,7 +10,7 @@ export default function Header({ loading, lastUpdated, onRefresh }) {
       className="sticky top-0 z-50 border-b border-line"
       style={{ background: "rgba(6,10,16,.97)", backdropFilter: "blur(20px)" }}
     >
-      <div className="max-w-4xl mx-auto px-5 flex items-center justify-between h-14">
+      <div className="max-w-6xl mx-auto px-5 flex items-center justify-between h-14">
 
         {/* Logo */}
         <div className="flex items-center gap-2.5">
